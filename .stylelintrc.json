@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "block-no-empty": true,
+    "unit-allowed-list": ["rem", "em", "%", "ms", "dvh", "vh", "dvw", "vw"],
+    "color-function-notation": "modern",
+    "color-no-hex": [
+      true,
+      {
+        "message": "Don't use hex colors like \"%s\""
+      }
+    ],
+    "number-max-precision": [
+      2,
+      {
+        "ignoreUnits": ["em"],
+        "severity": "warning"
+      }
+    ],
+    "alpha-value-notation": "number",
+    "selector-class-pattern": null
+  }
+}
