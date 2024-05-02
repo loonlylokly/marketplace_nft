@@ -18,11 +18,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "ignorePatterns": [
-    ".eslintrc.js",
-    ".vscode/**",
-    "public/**"
-  ],
+  "ignorePatterns": [".eslintrc.js", ".vscode/**", "public/**"],
   "plugins": [
     "@typescript-eslint",
     "react",
@@ -30,22 +26,22 @@
     "unused-imports",
     "no-relative-import-paths"
   ],
+  "overrides": [
+    {
+      "files": ["**/*.test.ts"],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "arrow-body-style": "warn",
-    "arrow-parens": [
-      "warn",
-      "always"
-    ],
+    "arrow-parens": ["warn", "always"],
     "react/jsx-filename-extension": [
       2,
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     ],
     "import/extensions": [
@@ -69,19 +65,12 @@
     ],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
-    "jsx-quotes": [
-      1,
-      "prefer-double"
-    ],
+    "jsx-quotes": [1, "prefer-double"],
     "no-extra-semi": "off",
     "no-magic-numbers": [
       "warn",
       {
-        "ignore": [
-          0,
-          1,
-          -1
-        ],
+        "ignore": [0, 1, -1],
         "ignoreArrayIndexes": true,
         "ignoreDefaultValues": true
       }
@@ -93,14 +82,8 @@
         "rootDir": "src"
       }
     ],
-    "react/jsx-indent": [
-      2,
-      2
-    ],
-    "react/jsx-indent-props": [
-      2,
-      2
-    ],
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2, 2],
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "warn",
