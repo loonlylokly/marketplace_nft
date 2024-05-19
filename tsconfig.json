@@ -12,24 +12,28 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["@testing-library/jest-dom"],
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/Public/*": ["./public/*"]
     }
   },
   "include": [
     "next-env.d.ts",
+    "global.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/shared/lib/mocks/Posts.ts",
     "src/shared/lib/mocks/posts.ts",
     "src/shared/lib/mocks/posts.ts",
-    "src/shared/lib/mocks/server.ts"
+    "src/shared/lib/mocks/server.ts",
+    "jest.setup.ts"
   ],
   "exclude": ["node_modules"]
 }

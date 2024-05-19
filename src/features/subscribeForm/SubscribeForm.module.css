@@ -1,0 +1,48 @@
+.form {
+  margin-top: 1rem;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.email.email {
+  width: 100%;
+  max-width: 50rem;
+
+  & > input {
+    line-height: 137%;
+  }
+}
+
+.btn {
+  width: 100%;
+}
+
+@media (min-width: 560px) {
+  .wrapper {
+    max-width: 42rem;
+    height: fit-content;
+    background-color: var(--clr-text);
+    border-radius: var(--brd);
+
+    grid-template-columns: 1fr fit-content(100%);
+    gap: 0;
+    /*
+    &:has(input:focus) {
+      background-color: red;
+    }
+    &:has(.input:active) {
+      background-color: red;
+    }
+
+    &:has(.input:invalid) {
+      background-color: red;
+    } */
+  }
+
+  .btn {
+    width: fit-content;
+  }
+}

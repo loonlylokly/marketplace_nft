@@ -7,10 +7,16 @@ const createJestConfig = nextJest({
 });
 
 const config: Config = {
+  moduleNameMapper: {
+    '^next$': require.resolve('next'),
+    '^next/navigation$': require.resolve('next/navigation'),
+  },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-environment-jsdom',
+  preset: 'ts-jest',
 };
 
 export default createJestConfig(config);

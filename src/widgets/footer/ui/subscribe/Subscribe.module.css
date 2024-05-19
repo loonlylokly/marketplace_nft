@@ -1,0 +1,9 @@
+.subscribe {
+  max-width: 42rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.desc {
+  color: var(--clr-caption);
+}

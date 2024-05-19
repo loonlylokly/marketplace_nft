@@ -1,0 +1,44 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: var(--pd-head-blc, 1.5rem) var(--pd-head-inl, 3rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-back);
+  z-index: var(--z-head, 100);
+}
+
+.logo {
+  width: 18.25rem;
+  height: 2.4rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.desktopMenu {
+  display: none;
+}
+
+.mobileMenu {
+  display: initial;
+}
+
+@media (min-width: 1000px) {
+  .logo {
+    width: 24.3rem;
+    height: 3.2rem;
+  }
+
+  .desktopMenu {
+    display: initial;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}

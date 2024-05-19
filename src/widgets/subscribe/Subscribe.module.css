@@ -1,0 +1,73 @@
+.subscribe {
+  max-width: 128rem;
+  border-radius: var(--brd);
+  display: grid;
+  gap: var(--gap-sub-sec, 3rem);
+}
+
+.wrap_img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.23;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: var(--brd);
+}
+
+.form {
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 550px) {
+  .subscribe {
+    padding: 4rem 3rem;
+    background-color: var(--clr-back-second);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .wrap_img {
+    position: relative;
+    height: 100%;
+  }
+}
+
+@media (min-width: 560px) {
+  .form > form > div {
+    background-color: transparent;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .form > form > div > button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 980px) {
+  .subscribe {
+    padding: 6rem;
+  }
+
+  .form {
+    gap: 0;
+  }
+
+  .form > form > div {
+    background-color: var(--clr-text);
+    grid-template-columns: 1fr fit-content(100%);
+    gap: 0;
+  }
+
+  .form > div {
+    align-items: center;
+  }
+
+  .form > form > button {
+    width: fit-content;
+  }
+}

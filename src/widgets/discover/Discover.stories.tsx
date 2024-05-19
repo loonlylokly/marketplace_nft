@@ -1,0 +1,21 @@
+import type { Meta, StoryObj } from '@storybook/react';
+
+import { Header } from '@/widgets/header/Header';
+
+const meta: Meta<typeof Header> = {
+  component: Header,
+  tags: ['autodocs'],
+};
+
+export default meta;
+type Story = StoryObj<typeof Header>;
+
+export const Default: Story = {
+  parameters: {
+    design: {
+      type: 'figma',
+      url: '',
+    },
+  },
+  args: {},
+};

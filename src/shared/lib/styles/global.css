@@ -1,0 +1,171 @@
+@import './variables.css';
+@import './normalize.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-work-sans);
+  font-size: 1.2rem;
+  color: var(--clr-text);
+  background-color: var(--clr-back);
+}
+
+a {
+  color: var(--clr-text);
+  text-decoration: none;
+}
+
+.main {
+  min-height: 100vh;
+  padding-top: 5.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  padding-inline: 3rem;
+}
+
+/* Screen Reader utility class */
+/* .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+} */
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes transition-out {
+  from {
+    opacity: 1;
+    translate: 0;
+    rotate: 0;
+  }
+  to {
+    opacity: 0;
+    translate: -3rem -5rem;
+    rotate: -10deg;
+  }
+}
+
+@keyframes transition-in {
+  from {
+    opacity: 0;
+    translate: 3rem 5rem;
+    rotate: -10deg;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+    rotate: 0;
+  }
+}
+
+@view-transition {
+  navigation: auto;
+  /* types: forwards, backwards; */
+}
+
+.main {
+  view-transition-name: content;
+}
+
+::view-transition-old(content) {
+  animation: 400ms transition-out 0ms ease;
+}
+::view-transition-new(content) {
+  animation: 400ms transition-in 0ms ease;
+}
+
+/* Determine what gets captured when the type is forwards or backwards */
+/* html:active-view-transition-type(forwards, backwards) { */
+/* :root {
+  view-transition-name: none;
+}
+.main {
+  view-transition-name: content;
+} */
+/* } */
+
+/* Animation styles for forwards type only */
+/* html:active-view-transition-type(forwards) { */
+/* ::view-transition-old(content) {
+  animation: 400ms transition-out 0ms ease;
+}
+::view-transition-new(content) {
+  animation: 400ms transition-in 0ms ease;
+} */
+/* } */
+
+/* Animation styles for backwards type only */
+html:active-view-transition-type(backwards) {
+  &::view-transition-old(content) {
+    /* animation-name: slide-out-to-right; */
+    animation: 1s transition-out 0s ease;
+  }
+  &::view-transition-new(content) {
+    /* animation-name: slide-in-from-left; */
+    animation: 1s transition-in 0s ease;
+  }
+}
+
+/* Animation styles for reload type only */
+html:active-view-transition-type(reload) {
+  &::view-transition-old(root) {
+    /* animation-name: fade-out, scale-down; */
+    animation: 1s transition-in 0s ease;
+  }
+  &::view-transition-new(root) {
+    /* animation-delay: 0.25s; */
+    /* animation-name: fade-in, scale-up; */
+    animation: 1s transition-in 0s ease;
+  }
+}
+
+@media (min-width: 834px) {
+  .wrapper {
+    padding-inline: 7.2rem;
+  }
+}
+
+@media (min-width: 984px) {
+  .main {
+    padding-top: 10rem;
+  }
+  .wrapper {
+    padding-inline: 7.2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wrapper {
+    padding-inline: 11.5rem;
+  }
+}

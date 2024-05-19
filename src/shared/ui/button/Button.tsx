@@ -1,31 +1,37 @@
 import { Slot, Slottable } from '@radix-ui/react-slot';
+import { forwardRef } from 'react';
 
-type TProps = {
-  asChild?: boolean;
-  leftElement?: React.ReactNode;
-  rightElement?: React.ReactNode;
-  children: React.ReactNode;
-};
+import { TButton } from '@/shared/types/ui';
 
-export const Button = ({
-  asChild,
-  leftElement,
-  rightElement,
-  children,
-  ...props
-}: TProps) => {
-  const Comp = asChild ? Slot : 'button';
-  return (
-    <Comp {...props}>
-      {leftElement}
-      <Slottable>{children}</Slottable>
-      {rightElement}
-    </Comp>
-  );
-};
+import style from './Button.module.css';
 
-Button.defaultProps = {
-  asChild: false,
-  leftElement: '',
-  rightElement: '',
-};
+export const Button = forwardRef<HTMLButtonElement, TButton>(
+  (
+    {
+      asChild = false,
+      appearance = 'primary',
+      size = 'lg',
+      leftElement = '',
+      rightElement = '',
+      className = '',
+      children,
+      ...rest
+    },
+    ref
+  ) => {
+    const Comp = asChild ? Slot : 'button';
+    return (
+      <Comp
+        {...rest}
+        ref={ref}
+        className={`${style.button} ${style[appearance]} ${style[size]} ${className}`}
+      >
+        {leftElement}
+        <Slottable>{children}</Slottable>
+        {rightElement}
+      </Comp>
+    );
+  }
+);
+
+Button.displayName = 'Button';

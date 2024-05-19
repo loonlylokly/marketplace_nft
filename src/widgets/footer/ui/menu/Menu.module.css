@@ -1,0 +1,15 @@
+.menu {
+  /* min-width: 24rem; */
+}
+
+.menu_list {
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  row-gap: 2rem;
+  list-style-type: none;
+
+  & a {
+    color: var(--clr-caption);
+  }
+}

@@ -1,6 +1,106 @@
 {
   "MainPage": {
+    "Metadata": {
+      "title": "Title Test",
+      "description": "Test description"
+    },
     "title": "Hello from Radix Themes :)",
     "button": "Let's go"
+  },
+  "Header": {
+    "Menu": {
+      "item1": "Marketplace",
+      "item2": "Rankings",
+      "item3": "Connect a wallet"
+    }
+  },
+  "signIn": "Sign In",
+  "Hero": {
+    "title": "Discover digital art & Collect NFTs",
+    "text": "NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.",
+    "cta": "Get Started",
+    "sales": "Total Sale",
+    "auctions": "Auctions",
+    "artists": "Artists"
+  },
+  "Trends": {
+    "title": "Trending Collection",
+    "subtitle": "Checkout our weekly updated trending collection."
+  },
+  "Ranking": {
+    "title": "Top Creators",
+    "subtitle": "Checkout Top Rated Creators on the NFT Marketplace",
+    "btn_view": "View Rankings",
+    "textTotalSales": "Total Sales:"
+  },
+  "CategoriesList": {
+    "title": "Browse Categories",
+    "categories": {
+      "1": "Art",
+      "2": "Collectibles",
+      "3": "Music",
+      "4": "Photography",
+      "5": "Video",
+      "6": "Utility",
+      "7": "Sport",
+      "8": "Virtual Worlds"
+    }
+  },
+  "Discover": {
+    "title": "Discover More NFTs",
+    "subtitle": "Explore new trending NFTs",
+    "btn_all": "See All",
+    "price": "Price",
+    "highestBid": "Highest Bid"
+  },
+  "HighLight": {
+    "btn_see": "See NFT",
+    "auction_end": "Auction ends in:"
+  },
+  "HowItWorks": {
+    "title": "How it works",
+    "subtitle": "Find out how to get started",
+    "steps": {
+      "1": {
+        "title": "Setup Your wallet",
+        "text": "Set up your wallet of choice. Connect it to the NFT market by clicking the wallet icon in the top right corner."
+      },
+      "2": {
+        "title": "Create Collection",
+        "text": "Upload your work and setup your collection. Add a description, social links and floor price."
+      },
+      "3": {
+        "title": "Start Earning",
+        "text": "Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others."
+      }
+    }
+  },
+  "Subscribe": {
+    "title": "Join our weekly digest",
+    "subtitle": "Get exclusive promotions & updates straight to your inbox.",
+    "submitBtn": "Subscribe"
+  },
+  "Footer": {
+    "info": {
+      "desc": "NFT marketplace UI created with Anima for Figma.",
+      "social": "Join our community"
+    },
+    "menu": {
+      "title": "Explore",
+      "item_1": "Marketplace",
+      "item_2": "Rankings",
+      "item_3": "Connect a wallet"
+    },
+    "subscribe": {
+      "title": "Join our weekly digest",
+      "desc": "Get exclusive promotions & updates straight to your inbox."
+    },
+    "submitBtn": "Subscribe",
+    "copyright": "Ⓒ NFT Market. Use this template freely."
+  },
+  "Time": {
+    "hours": "{count, plural, one {Hour} other {Hours}}",
+    "minutes": "{count, plural, one {Minut} other {Minutes}}",
+    "seconds": "{count, plural, one {Second} other {Seconds}}"
   }
 }

@@ -1,0 +1,83 @@
+.button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.2rem;
+  color: var(--clr-text);
+  font-family: var(--font-work-sans);
+  font-size: 1.6rem;
+  line-height: 140%;
+  font-weight: 600;
+  transition: 300ms;
+  user-select: none;
+  cursor: pointer;
+
+  &:active {
+    transition: 300ms;
+  }
+
+  & svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.primary,
+.secondary,
+.tertiary {
+  border: 0.2rem solid var(--clr-cta);
+  border-radius: 2rem;
+}
+
+.primary {
+  background-color: var(--clr-cta);
+
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+
+  &:active {
+    background-color: var(--clr-cta);
+  }
+}
+
+.tertiary {
+  background-color: var(--clr-text);
+  border-color: var(--clr-text);
+  color: var(--clr-back);
+
+  &:active {
+    background-color: var(--clr-primary);
+    border-color: var(--clr-cta);
+  }
+}
+
+.text {
+  background-color: transparent;
+  border: none;
+
+  &:active {
+    border: 0.2rem solid var(--clr-cta);
+    border-radius: 2rem;
+  }
+}
+
+.lg {
+  height: 7.2rem;
+  padding: 2.05rem 4.8rem;
+}
+
+.md {
+  height: 6rem;
+  padding: 1.9rem 4.8rem;
+}
+
+.sm {
+  height: 4.6rem;
+  padding: 1.2rem 4.8rem;
+}

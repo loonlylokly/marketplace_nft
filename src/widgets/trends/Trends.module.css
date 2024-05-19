@@ -1,0 +1,49 @@
+.trends {
+  width: 100%;
+  max-width: 128rem;
+  display: grid;
+  gap: var(--gap-section, 4rem);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-cards-list, 2rem);
+
+  & a {
+    width: 100%;
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 420px) {
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+
+    & a:nth-child(2) {
+      display: initial;
+    }
+  }
+}
+
+@media (min-width: 835px) {
+  .gallery {
+    & a:nth-child(3) {
+      display: initial;
+    }
+  }
+}

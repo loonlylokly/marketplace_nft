@@ -1,0 +1,46 @@
+.card {
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.main_img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.wrap_image {
+  position: relative;
+  width: calc((100% - 3rem) / 3);
+  aspect-ratio: 1;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--brd);
+}
+
+.more {
+  width: calc((100% - 3rem) / 3);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-primary);
+  border-radius: var(--brd);
+  font-family: var(--font-space-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.caption {
+  margin-top: 1.6rem;
+}

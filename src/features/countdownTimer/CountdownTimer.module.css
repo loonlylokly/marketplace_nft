@@ -1,0 +1,35 @@
+.timer {
+  width: fit-content;
+  padding: 3rem;
+  background-color: var(--clr-back-second-tr50);
+  backdrop-filter: blur(10px);
+  border-radius: var(--brd);
+  display: grid;
+  gap: 1rem;
+}
+
+.time {
+  width: 25.5rem;
+  display: grid;
+  grid-template-columns: 1fr fit-content(100%) 1fr fit-content(100%) 1fr;
+  column-gap: 1rem;
+}
+
+.time_block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digit {
+  width: 45%;
+}
+
+.label {
+  width: 100%;
+}
+
+@media (min-width: 834px) {
+  .time {
+    width: 23.5rem;
+  }
+}

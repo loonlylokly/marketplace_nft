@@ -1,0 +1,44 @@
+.footer {
+  margin-top: 3.8rem;
+  padding: 4rem 3rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 105rem;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 3rem;
+}
+
+.divider {
+  width: 100%;
+  max-width: 105rem;
+  margin-top: 1rem;
+}
+
+.copyright {
+  color: var(--clr-caption);
+  width: 100%;
+  max-width: 105rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 834px) {
+  .footer {
+    padding: 4rem 7.2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    padding: 5rem 3rem;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

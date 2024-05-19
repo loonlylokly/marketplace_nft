@@ -1,0 +1,76 @@
+.ranking {
+  width: 100%;
+  max-width: 128rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-section, 4rem);
+}
+
+.title {
+  width: 100%;
+}
+
+.btn_viewRank {
+  width: 100%;
+  order: 2;
+}
+
+.icon > path {
+  fill: var(--clr-primary);
+}
+
+.ranking_authors {
+  width: 100%;
+  display: grid;
+  gap: var(--gap-cards-list, 2rem);
+}
+
+.author:nth-of-type(n + 6) {
+  display: none;
+}
+
+@media (min-width: 560px) {
+  .ranking_authors {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .author:nth-of-type(-n + 6) {
+    display: initial;
+  }
+}
+
+@media (min-width: 630px) {
+  .ranking {
+    justify-content: space-between;
+  }
+
+  .title {
+    max-width: 55%;
+  }
+
+  .btn_viewRank {
+    width: fit-content;
+    align-self: flex-end;
+    order: 0;
+  }
+}
+
+@media (min-width: 980px) {
+  .ranking_authors {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .title {
+    max-width: 65%;
+  }
+
+  .author:nth-of-type(-n + 12) {
+    display: initial;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ranking_authors {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

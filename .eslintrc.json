@@ -8,6 +8,8 @@
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
@@ -50,9 +52,9 @@
       {
         "js": "never",
         "jsx": "never",
-        "svg": "never",
         "ts": "never",
         "tsx": "never",
+        "svg": "always",
         "webp": "always",
         "json": "always"
       }
@@ -86,7 +88,7 @@
     "react/jsx-indent-props": [2, 2],
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
-    "react/require-default-props": "warn",
+    "react/require-default-props": "off",
     "react/self-closing-comp": [
       "warn",
       {

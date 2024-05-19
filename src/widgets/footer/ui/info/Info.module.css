@@ -1,0 +1,57 @@
+.info {
+  display: grid;
+  gap: 2rem;
+  color: var(--clr-caption);
+}
+
+.logo {
+  width: 24.3rem;
+  height: 2.2rem;
+  margin-bottom: 0.7rem;
+  display: inline-block;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1.5rem;
+
+  & > p:nth-of-type(2) {
+    margin-top: 0.5rem;
+  }
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.8rem;
+  list-style-type: none;
+}
+
+.social_link {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: inline-block;
+
+  & svg path {
+    fill: var(--clr-caption);
+  }
+}
+
+.twitter.twitter path {
+  fill: none;
+  stroke: var(--clr-caption);
+}
+
+.social_item {
+  width: fit-content;
+  height: 3.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    max-width: 23.8rem;
+  }
+}
