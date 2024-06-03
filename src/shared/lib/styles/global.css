@@ -90,7 +90,6 @@ a {
 
 @view-transition {
   navigation: auto;
-  /* types: forwards, backwards; */
 }
 
 .main {
@@ -102,51 +101,6 @@ a {
 }
 ::view-transition-new(content) {
   animation: 400ms transition-in 0ms ease;
-}
-
-/* Determine what gets captured when the type is forwards or backwards */
-/* html:active-view-transition-type(forwards, backwards) { */
-/* :root {
-  view-transition-name: none;
-}
-.main {
-  view-transition-name: content;
-} */
-/* } */
-
-/* Animation styles for forwards type only */
-/* html:active-view-transition-type(forwards) { */
-/* ::view-transition-old(content) {
-  animation: 400ms transition-out 0ms ease;
-}
-::view-transition-new(content) {
-  animation: 400ms transition-in 0ms ease;
-} */
-/* } */
-
-/* Animation styles for backwards type only */
-html:active-view-transition-type(backwards) {
-  &::view-transition-old(content) {
-    /* animation-name: slide-out-to-right; */
-    animation: 1s transition-out 0s ease;
-  }
-  &::view-transition-new(content) {
-    /* animation-name: slide-in-from-left; */
-    animation: 1s transition-in 0s ease;
-  }
-}
-
-/* Animation styles for reload type only */
-html:active-view-transition-type(reload) {
-  &::view-transition-old(root) {
-    /* animation-name: fade-out, scale-down; */
-    animation: 1s transition-in 0s ease;
-  }
-  &::view-transition-new(root) {
-    /* animation-delay: 0.25s; */
-    /* animation-name: fade-in, scale-up; */
-    animation: 1s transition-in 0s ease;
-  }
 }
 
 @media (min-width: 834px) {

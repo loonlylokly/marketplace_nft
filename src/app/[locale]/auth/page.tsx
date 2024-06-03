@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import { TLocales } from '@/shared/types/common';
@@ -19,6 +20,8 @@ export default function page({ params: { locale } }: TProps) {
   return (
     <main className={'main'}>
       <h1>Auth</h1>
+      <a href="/">Test</a>
+      <Link href="/">Test</Link>
     </main>
   );
 }

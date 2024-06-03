@@ -4,6 +4,10 @@
   height: fit-content;
   display: grid;
   grid-template-rows: fit-content(100%) 1fr;
+  &:hover .cover {
+    opacity: 0;
+    transition: 300ms;
+  }
 }
 
 .wrap_image {
@@ -27,6 +31,7 @@
   align-items: center;
   backdrop-filter: blur(10px);
   border-radius: var(--brd, 2rem) var(--brd, 2rem) 0 0;
+  transition: 300ms;
 }
 
 .cover_icon {
